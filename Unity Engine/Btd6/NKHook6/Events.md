@@ -15,7 +15,7 @@ public class MyMod : MelonMod
     public override void OnApplicationStart()
     {
         base.OnApplicationStart();
-        EventRegistry.subscriber.register(typeof(MyMod));
+        EventRegistry.subscriber.listen(typeof(MyMod));
     }
 }
 ```
@@ -27,7 +27,7 @@ public class MyMod : MelonMod
     public override void OnApplicationStart()
     {
         base.OnApplicationStart();
-        EventRegistry.subscriber.register(typeof(MyMod));
+        EventRegistry.subscriber.listen(typeof(MyMod));
     }
     [EventAttribute("<EventName>")]
     public static void onEvent(<EventGroup>.<EventClass> e){
@@ -43,7 +43,7 @@ public class MyMod : MelonMod
     public override void OnApplicationStart()
     {
         base.OnApplicationStart();
-        EventRegistry.subscriber.register(typeof(MyMod));
+        EventRegistry.subscriber.listen(typeof(MyMod));
     }
     [EventAttribute("BloonLeakedEvent")]
     public static void onEvent(BloonEvents.LeakedEvent e){
